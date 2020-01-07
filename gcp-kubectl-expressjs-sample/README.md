@@ -71,6 +71,7 @@ Test nodejs api, Below kubernate command that will list out all running service 
 kubectl get svc
 ```
 ```
+NAME         TYPE           CLUSTER-IP      EXTERNAL-IP    PORT(S)        AGE
 kubernetes   ClusterIP      10.51.240.1     <none>          443/TCP        20h
 nodeapp      LoadBalancer   10.51.241.210   35.188.48.164   80:32592/TCP   19h
 ```
