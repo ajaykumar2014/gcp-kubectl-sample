@@ -75,10 +75,13 @@ kubernetes   ClusterIP      10.51.240.1     <none>          443/TCP        20h
 nodeapp      LoadBalancer   10.51.241.210   35.188.48.164   80:32592/TCP   19h
 ```
 
-Run the curl command to test nodejs api.
+Run the curl command to test nodejs api. ( Copy EXTERNAL IP address for api testing)
 
 ```
+curl <EXTERNAL LOADBALANCE IP ADDRESS>
+i.e
 curl 35.188.48.164
+
 ```
 
 
