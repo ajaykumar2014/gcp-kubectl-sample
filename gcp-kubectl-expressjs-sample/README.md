@@ -46,7 +46,7 @@
 
 #### 
 
-Test nodejs api, Below kubernate command list out all running service. copy EXTERNAL_ID address of type loadbalance.
+Test nodejs api, Below kubernate command that will list out all running service in kuberctl. copy EXTERNAL_ID address of type loadbalance.
 
 ```
 kubectl get svc
