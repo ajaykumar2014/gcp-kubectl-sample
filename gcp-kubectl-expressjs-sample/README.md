@@ -48,7 +48,7 @@
 
   cd gcp-kubectl-sample/gcp-kubectl-expressjs-sample/
   ```
-  build and submit Docker images and once image is created then copy complete images path i.e ( gcr.io/self-exercise/kub_node:1.0) from console status. Note - Make sure $PROJECT_ID should be valid.
+  build and submit Docker images and once image is created then copy complete images path i.e ( gcr.io/<PROJECT_ID>/kub_node:1.0) from console status. Note - Make sure $PROJECT_ID should be valid.
   ```
   gcloud builds submit -t gcr.io/$PROJECT_ID/kub_node:1.0
   ```
