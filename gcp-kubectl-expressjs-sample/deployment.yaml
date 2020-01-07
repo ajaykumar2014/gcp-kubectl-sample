@@ -15,7 +15,7 @@ spec:
         app: nodeapp
     spec:
       containers:
-      - name: nodeapp
-        image: gcr.io/roicourse-247519/kub_node:1.0
-        ports:
-        - containerPort: 8080
+        - name: nodeapp
+          image: gcr.io/roicourse-247519/kub_node:1.0
+          ports:
+            - containerPort: 8080

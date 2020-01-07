@@ -20,6 +20,10 @@
    * Set the project config in Google console.
    ```
    gcloud config set project <PROJECT_NAME>
+   
+   export PROJECT_ID=<PROJECT_NAME>
+
+   echo $PROJECT_ID
    ````
    * set compute/zone 
    ```
@@ -32,13 +36,17 @@
 
 #### Step 2 :
 
- Create a cluster with name "demo-cluster-app" with node 3. ( It will take fews mins to create a cluster )
+ Create a cluster with name "demo-cluster-app" with node 3. ( wait few mins till cluster is created. )
   ```
   gcloud container clusters create demo-cluster-app --num-nodes=3 --zone us-central1-a
 
   git clone https://github.com/ajaykumar2014/gcp-kubectl-sample.git
 
   cd gcp-kubectl-sample/gcp-kubectl-expressjs-sample/
+
+  gcloud builds submit -t gcr.io/$PROJECT_ID/kub_node:1.0
+
+  // Open deployment.yaml file and replace $PROJECT_ID placehold with project name in spec.containers.images.
 
   kubectl apply -f deployment.yaml
 
