@@ -36,6 +36,10 @@
   ```
   gcloud container clusters create demo-cluster-app --num-nodes=3 --zone us-central1-a
 
+  git clone https://github.com/ajaykumar2014/gcp-kubectl-sample.git
+
+  cd gcp-kubectl-sample/gcp-kubectl-expressjs-sample/
+
   kubectl apply -f deployment.yaml
 
   kubectl get deployment
