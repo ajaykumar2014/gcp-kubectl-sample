@@ -39,15 +39,22 @@
  Create a cluster with name "demo-cluster-app" with node 3. ( wait few mins till cluster is created. )
   ```
   gcloud container clusters create demo-cluster-app --num-nodes=3 --zone us-central1-a
+  ``` 
+  
+  Checkout the below github code
 
+  ```
   git clone https://github.com/ajaykumar2014/gcp-kubectl-sample.git
 
   cd gcp-kubectl-sample/gcp-kubectl-expressjs-sample/
-
+  ```
+  build and submit Docker images and images is created on console status then copy complete images path i.e ( gcr.io/self-exercise/kub_node:1.0). Note - Make sure $PROJECT_ID should be valid.
+  ```
   gcloud builds submit -t gcr.io/$PROJECT_ID/kub_node:1.0
+  ```
+  Open deployment.yaml file and replace images name with copied images name.
 
-  // Open deployment.yaml file and replace $PROJECT_ID placehold with project name in spec.containers.images.
-
+  ```
   kubectl apply -f deployment.yaml
 
   kubectl get deployment
