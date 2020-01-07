@@ -56,8 +56,18 @@ kubernetes   ClusterIP      10.51.240.1     <none>          443/TCP        20h
 nodeapp      LoadBalancer   10.51.241.210   35.188.48.164   80:32592/TCP   19h
 ```
 
-run the curl command to test nodejs api.
+Run the curl command to test nodejs api.
 
 ```
 curl 35.188.48.164
+```
+
+
+#### Delete cluster once testing is done.
+
+```
+
+gcloud config set project <PROJECT_ID>
+gcloud container clusters delete demo-cluster-app --zone us-central1-a
+
 ```
